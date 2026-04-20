@@ -58,6 +58,8 @@
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 % ---
 
+\usepackage{tcolorbox}
+
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -169,7 +171,23 @@
    \vspace{\onelineskip}
 
    \noindent
-   \textbf{Palavras-chaves}: Vehicle Telemetry. IoT . Fleet Management. Security. Geofencing. Microcontroller.
+   \textbf{Palavras-chaves}: Telemetria Veicular. IoT. Gestão de frotas. Segurança. Geocerca. Microcontrolador.
+\end{resumoumacoluna}
+
+% ---
+% RESUMO EM INGLÊS (Abstract)
+% ---
+\vspace{2cm}
+\renewcommand{\resumoname}{Abstract}
+\begin{resumoumacoluna}
+   \begin{otherlanguage*}{english}
+      The advancement of the Internet of Things (IoT) has significantly transformed the landscape of vehicle telemetry and fleet management, enabling a transition from passive tracking systems to highly integrated real-time monitoring solutions. However, developing systems that combine active security (such as geofences and remote ignition cutoff) with economic viability still faces technical and standardization challenges. Many current commercial solutions have high costs, which motivates research into low-cost hardware architectures based on accessible microcontrollers such as the ESP32, Arduino, and Raspberry Pi. Beyond hardware issues, the effectiveness of these systems depends on robust communication strategies, ranging from the use of 4G/LTE mobile networks to long-range, low-power protocols like LoRaWAN. This paper presents a literature review aimed at analyzing the state of the art of these systems, identifying predominant architectures, actuation strategies, and how data is integrated into external platforms. The analysis seeks to map technical limitations and security gaps, providing a solid foundation for developing new telemetry solutions that are both affordable and efficient in protecting vehicle assets.
+
+      \vspace{\onelineskip}
+
+      \noindent
+      \textbf{Keywords}: Vehicle Telemetry. IoT. Fleet Management. Security. Geofencing. Microcontroller.
+   \end{otherlanguage*}
 \end{resumoumacoluna}
 
 % ]  				% FIM DE ARTIGO EM DUAS COLUNAS
@@ -186,36 +204,64 @@
 \section*{Introdução}
 \addcontentsline{toc}{section}{Introdução}
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento exemplifica a
-elaboração de publicação periódica científica impressa produzida conforme a ABNT
-NBR 6022:2003 \emph{Informação e documentação - Artigo em publicação periódica
-   científica impressa - Apresentação}.
+A crescente integração de tecnologias digitais aos sistemas de transporte tem impulsionado o desenvolvimento de soluções baseadas em Internet das Coisas (IoT), especialmente no contexto da telemetria veicular e da gestão de frotas. Nesse cenário, dispositivos embarcados capazes de coletar, processar e transmitir dados em tempo real têm se tornado fundamentais para melhorar a eficiência logística, a segurança operacional e o monitoramento de ativos.
 
-A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+Apesar desses avanços, ainda existem desafios relevantes na implementação dessas soluções, especialmente em relação ao custo, à padronização das arquiteturas e à confiabilidade dos mecanismos de segurança. Muitas plataformas comerciais oferecem funcionalidades avançadas, porém com alto custo de aquisição e manutenção, o que limita sua adoção em contextos de menor escala ou em países em desenvolvimento. Como alternativa, tem-se observado um crescimento no uso de arquiteturas baseadas em microcontroladores de baixo custo, como ESP32, Arduino e Raspberry Pi, que viabilizam o desenvolvimento de sistemas mais acessíveis.
 
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://abntex2.googlecode.com/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+Além da escolha do hardware, a efetividade desses sistemas está diretamente relacionada às estratégias de comunicação e integração de dados, envolvendo desde redes celulares (como 4G/LTE) até tecnologias de longo alcance e baixo consumo, como LoRaWAN. Paralelamente, funcionalidades de segurança ativa, como geocercas, alertas automatizados e controle remoto de ignição, têm ganhado destaque, mas ainda carecem de maior consolidação em termos de implementação e validação prática.
 
-Encorajamos que sejam realizadas customizações específicas deste documento.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações. Isso permite
-que futuras versões do \abnTeX~não se tornem automaticamente incompatíveis com
-as customizações promovidas. Consulte \citeonline{abntex2-wiki-como-customizar}
-par mais informações.
+Diante desse contexto, este trabalho apresenta uma revisão da literatura com o objetivo de analisar o estado da arte de sistemas de telemetria veicular baseados em IoT, com foco em soluções de baixo custo e mecanismos de segurança ativa. A revisão busca identificar as principais arquiteturas de hardware adotadas, as estratégias de monitoramento e atuação implementadas, bem como as formas de integração dos dados em plataformas externas. A partir dessa análise, pretende-se evidenciar limitações técnicas recorrentes e lacunas existentes na literatura, contribuindo para o desenvolvimento de soluções mais eficientes e acessíveis.
 
-Este exemplo deve ser utilizado como complemento do manual da classe
-\textsf{abntex2} \cite{abntex2classe}, dos manuais do pacote
-\textsf{abntex2cite} \cite{abntex2cite,abntex2cite-alf} e do manual da classe
-\textsf{memoir} \cite{memoir}. Consulte o \citeonline{abntex2modelo} para obter
-exemplos e informações adicionais de uso de \abnTeX\ e de \LaTeX.
+\section{Procedimentos Metodológicos}
+
+Esta pesquisa caracteriza-se como uma revisão de literatura de natureza qualitativa, com o objetivo de analisar o estado da arte de sistemas de telemetria veicular baseados em Internet das Coisas (IoT), com ênfase em arquiteturas de baixo custo e mecanismos de segurança ativa. Para garantir a organização e a reprodutibilidade do estudo, foi elaborado um protocolo de revisão contendo a definição do tema, os objetivos, as fontes de busca, os critérios de seleção dos trabalhos e as estratégias de extração e análise dos dados.
+
+\subsection{Formulação das Perguntas de Pesquisa}
+
+Com o intuito de direcionar a análise e garantir a consistência da revisão, foram definidas as seguintes perguntas de pesquisa:
+
+\begin{itemize}
+   \item Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?
+   \item Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?
+   \item Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?
+\end{itemize}
+
+\subsection{Estratégia de Busca}
+
+A estratégia de busca foi definida com o objetivo de identificar estudos relevantes relacionados à telemetria veicular baseada em Internet das Coisas (IoT), com foco em arquiteturas de baixo custo e mecanismos de segurança. As buscas foram realizadas nas bases de dados Google Acadêmico e IEEE Xplore, considerando publicações no período de 2020 a 2026.
+
+Inicialmente, foi elaborada uma string de busca abrangente, contendo palavras-chave e sinônimos em inglês relacionados aos principais conceitos do estudo. No entanto, verificou-se que o uso de uma string muito extensa resultava em limitações nas plataformas, como ausência de resultados relevantes ou falhas na execução da busca.
+
+Dessa forma, as strings foram adaptadas para cada base de dados, buscando equilibrar abrangência e precisão dos resultados.
+
+As strings completas são apresentadas a seguir para fins de reprodutibilidade do estudo.
+
+\begin{tcolorbox}[title=String de busca — Google Acadêmico]
+   ("vehicle telemetry" OR "vehicle monitoring" OR "vehicle tracking" OR
+   "fleet management systems")
+   AND ("fleet management" OR "vehicle management" OR "fleet monitoring"
+   OR "fleet operations")
+   AND ("internet of things" OR "iot" OR "machine-to-machine" OR "m2m")
+   AND ("vehicle" OR "vehicular" OR "automotive" OR "fleet")
+   AND ("security")
+   AND ("tracking" OR "localization" OR "geolocation" OR "positioning")
+   AND ("speed limiting" OR "speed control" OR "speed restriction"
+   OR "speed regulation" OR "speed violation")
+   AND ("microcontroller" OR "embedded system" OR "microprocessor"
+   OR "hardware")
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=String de busca — IEEE Xplore]
+   ("vehicle telemetry" OR "vehicle monitoring" OR "vehicle tracking" OR
+   "fleet management systems")
+   AND ("fleet management" OR "vehicle management" OR "fleet monitoring"
+   OR "fleet operations")
+   AND ("internet of things" OR "iot" OR "machine-to-machine" OR "m2m")
+   AND ("vehicle" OR "vehicular" OR "automotive" OR "fleet")
+   AND ("security")
+\end{tcolorbox}
+
+Essa adaptação foi necessária para contornar limitações técnicas das plataformas e garantir a obtenção de resultados mais alinhados ao escopo da pesquisa.
 
 % ----------------------------------------------------------
 % Seção de explicações
