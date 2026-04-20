@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex main"] 1775671530.07801 "main.aux" "main.bbl" "main" 1776687790.27956 0
+["bibtex main"] 1776690599.18314 "main.aux" "main.bbl" "main" 1776690691.65041 0
   "./refs.bib" 1775669022 12072 3728a03e881662bee00e0740e01bac52 ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1776687789 10986 e60f5b820b1ddef4ad8315cfc2c630e2 "pdflatex"
+  "main.aux" 1776690690 10774 3a0c81e88c2dbce9aa4244e545aecd95 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1775671527.15135 "main.idx" "main.ind" "main" 1776687790.27906 0
-  "main.idx" 1776687789 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1776689881.08562 "main.idx" "main.ind" "main" 1776690691.64997 0
+  "main.idx" 1776690690 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1776687788.10791 "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" "main.pdf" "main" 1776687790.28006 0
+["pdflatex"] 1776690688.97919 "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" "main.pdf" "main" 1776690691.65094 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
@@ -168,12 +168,12 @@
   "C:/Program Files/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760473305 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/david/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760473575 24215232 fd503d8d254be5807613177266cb1b78 ""
-  "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" 1775671551 14671 8274cf18f78dfbf550cd2dc82c61f265 ""
-  "main.aux" 1776687789 10986 e60f5b820b1ddef4ad8315cfc2c630e2 "pdflatex"
-  "main.bbl" 1775671530 2501 3085052599e12e2d0a5f14e8a979c473 "bibtex main"
-  "main.brf" 1776687789 598 096c5acf296c61390e097f25e1335afb "pdflatex"
-  "main.ind" 1775671527 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.tex" 1775671551 14671 8274cf18f78dfbf550cd2dc82c61f265 ""
+  "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" 1776690688 15833 a84dd3dd99971085c003af92b32aeca9 ""
+  "main.aux" 1776690690 10774 3a0c81e88c2dbce9aa4244e545aecd95 "pdflatex"
+  "main.bbl" 1776690599 2117 e29d0dcff2dd416c9cb976dcb6424a45 "bibtex main"
+  "main.brf" 1776690690 548 7058739427f98f108de4a55459d96704 "pdflatex"
+  "main.ind" 1776689881 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.tex" 1776690688 15833 a84dd3dd99971085c003af92b32aeca9 ""
   (generated)
   "main.aux"
   "main.brf"
