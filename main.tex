@@ -59,6 +59,7 @@
 % ---
 
 \usepackage{tcolorbox}
+\usepackage{url}
 
 % ---
 % Configurações do pacote backref
@@ -262,6 +263,79 @@ As strings completas são apresentadas a seguir para fins de reprodutibilidade d
 \end{tcolorbox}
 
 Essa adaptação foi necessária para contornar limitações técnicas das plataformas e garantir a obtenção de resultados mais alinhados ao escopo da pesquisa.
+
+\subsection{Seleção dos Estudos}
+
+O processo de seleção dos estudos foi realizado em duas etapas. Inicialmente, foi feita uma triagem preliminar dos trabalhos encontrados nas bases de dados, com base na leitura dos títulos e resumos, com o objetivo de identificar estudos potencialmente relevantes ao tema da pesquisa.
+
+Em seguida, os trabalhos pré-selecionados foram analisados de forma mais detalhada, sendo submetidos a critérios de inclusão e exclusão previamente definidos. Essa etapa teve como objetivo garantir que apenas estudos alinhados ao escopo da revisão, especialmente aqueles que envolvem o desenvolvimento de sistemas de telemetria com foco em hardware, comunicação de dados e segurança, fossem considerados na análise final.
+
+Os critérios utilizados estão apresentados na Tabela \ref{tab:criterios_selecao}.
+
+\begin{table}[h]
+   \centering
+   \caption{Critérios de inclusão e exclusão dos estudos}
+   \label{tab:criterios_selecao}
+   \begin{tabular}{|p{10cm}|c|}
+      \hline
+      \textbf{Critério}                                                                                          & \textbf{Tipo} \\
+      \hline
+      O trabalho propõe ou desenvolve um sistema de telemetria.                                                  & Inclusão      \\
+      \hline
+      O trabalho inclui a segurança (ativa, passiva ou do veículo) como um de seus objetivos ou funcionalidades. & Inclusão      \\
+      \hline
+      O trabalho descreve o desenvolvimento de um dispositivo físico (hardware) de telemetria.                   & Inclusão      \\
+      \hline
+      O trabalho não especifica minimamente os componentes técnicos (controladores, módulos ou sensores).        & Exclusão      \\
+      \hline
+      O sistema/dispositivo não possui a função de rastreamento (geolocalização).                                & Exclusão      \\
+      \hline
+      O sistema não realiza a transmissão de dados para visualização ou processamento.                           & Exclusão      \\
+      \hline
+   \end{tabular}
+\end{table}
+
+Ao final desse processo de seleção, foram incluídos 18 artigos, considerados aderentes ao escopo da pesquisa e, portanto, selecionados para a etapa de análise.
+
+\subsection{Avaliação dos Estudos}
+
+Após a seleção dos trabalhos, foi realizada a etapa de avaliação dos estudos, com o objetivo de analisar a qualidade e a profundidade técnica das propostas apresentadas. Para isso, foram definidos critérios de avaliação baseados em aspectos relevantes ao contexto de sistemas de telemetria veicular, especialmente no que diz respeito à implementação prática, comunicação de dados e interação com o veículo.
+
+Os critérios de qualidade adotados estão apresentados na Tabela \ref{tab:criterios_qualidade}.
+
+\begin{table}[h]
+   \centering
+   \caption{Critérios de avaliação da qualidade dos estudos}
+   \label{tab:criterios_qualidade}
+   \begin{tabular}{|p{10cm}|c|}
+      \hline
+      \textbf{Critério}                                                                               & \textbf{Pontuação} \\
+      \hline
+      Nível de detalhamento da metodologia do desenvolvimento do hardware.                            & 0 a 2              \\
+      \hline
+      Nível de complexidade da infraestrutura de transmissão externa de dados.                        & 0 a 2              \\
+      \hline
+      Nível de detalhamento dos testes realizados.                                                    & 0 a 2              \\
+      \hline
+      Complexidade do sistema como um todo.                                                           & 0 a 2              \\
+      \hline
+      O sistema interage ativamente no comportamento do motorista ou veículo, independente da função. & 0 a 2              \\
+      \hline
+   \end{tabular}
+\end{table}
+
+A pontuação dos critérios foi atribuída de forma inteira, sem o uso de valores decimais, variando de 0 a 2 para cada item, conforme o nível de atendimento observado em cada estudo.
+
+A partir da aplicação desses critérios, foi possível estabelecer uma análise comparativa entre os trabalhos selecionados. Observou-se que a nota mínima obtida entre os artigos foi 7, enquanto a maioria dos estudos apresentou pontuação 9, indicando um bom nível geral de qualidade. Destaca-se ainda que dois artigos atingiram a pontuação máxima de 10, evidenciando um alto grau de detalhamento técnico, robustez experimental e complexidade de implementação.
+
+
+\subsection{Considerações Finais dos Procedimentos Metodológicos}
+
+A condução desta revisão de literatura concentrou-se nas bases de dados Google Acadêmico e IEEE Xplore. A escolha por essas plataformas deve-se, principalmente, à limitação de trabalhos diretamente relacionados ao tema específico desta pesquisa, especialmente no que se refere à integração entre telemetria veicular, baixo custo e mecanismos de segurança ativa.
+
+Diante desse cenário, os critérios de inclusão e exclusão, bem como os critérios de avaliação da qualidade dos estudos, foram aplicados de forma a garantir a seleção de trabalhos relevantes, ainda que com um nível de rigor moderado, visando preservar um conjunto de dados suficientemente representativo para análise. Essa abordagem permitiu equilibrar a abrangência da revisão com a disponibilidade limitada de estudos diretamente aderentes ao escopo proposto.
+
+Ressalta-se que todo o processo metodológico foi previamente estruturado por meio de um protocolo de revisão de literatura, no qual estão detalhadas as estratégias de busca, incluindo palavras-chave utilizadas, combinações de termos, lista de trabalhos encontrados, links de acesso e demais informações complementares.\footnote{Protocolo de revisão de literatura disponível em: \url{https://drive.google.com/file/d/1ycxy1grOSLdAdATd5NtJrtUyO6gxBmgF/view?usp=sharing}}
 
 % ----------------------------------------------------------
 % Seção de explicações
