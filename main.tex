@@ -63,6 +63,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\usepackage{titlesec}
+
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -339,11 +341,14 @@ Diante desse cenário, os critérios de inclusão e exclusão, bem como os crit�
 
 Ressalta-se que todo o processo metodológico foi previamente estruturado por meio de um protocolo de revisão de literatura, no qual estão detalhadas as estratégias de busca, incluindo palavras-chave utilizadas, combinações de termos, lista de trabalhos encontrados, links de acesso e demais informações complementares.\footnote{Protocolo de revisão de literatura disponível em: \url{https://drive.google.com/file/d/1ycxy1grOSLdAdATd5NtJrtUyO6gxBmgF/view?usp=sharing}}
 
-\section{Resultados e Discussões}
+\section{Resultados}
 
 Esta seção apresenta a análise dos estudos selecionados, com base nas perguntas de pesquisa definidas anteriormente. A discussão foi estruturada de forma a responder cada questão individualmente, a partir dos dados extraídos dos artigos analisados, permitindo a identificação de padrões, tendências e lacunas na literatura.
 
-\subsection*{Q1: Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?}
+\subsection{Resultados das Perguntas de Pesquisa}
+Os resultados da revisão são apresentados a seguir, de forma geral, e organizados conforme as perguntas de pesquisa estabelecidas. Para cada questão, são discutidas as principais abordagens identificadas nos estudos analisados.
+
+\subsubsection{Q1: Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?}
 
 A análise dos estudos selecionados evidencia que a maioria das soluções de telemetria veicular de baixo custo é baseada em arquiteturas embarcadas utilizando microcontroladores de fácil acesso e ampla adoção no meio acadêmico e experimental. Entre os principais dispositivos identificados, destacam-se plataformas como ESP32, Arduino e Raspberry Pi, utilizadas de forma isolada ou combinada, dependendo da complexidade do sistema proposto.
 
@@ -365,7 +370,7 @@ Apesar da diversidade de arquiteturas encontradas, observa-se uma tendência à 
 
 Dessa forma, conclui-se que, embora exista uma convergência no uso de microcontroladores acessíveis como base das arquiteturas de telemetria veicular, ainda há uma grande heterogeneidade na forma como esses componentes são integrados, evidenciando a ausência de padrões consolidados na literatura.
 
-\subsection*{Q2: Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?}
+\subsubsection{Q2: Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?}
 
 A análise dos estudos selecionados demonstra que os sistemas de telemetria veicular baseados em IoT incorporam diferentes estratégias de atuação com o objetivo de promover segurança ativa, atuando diretamente no comportamento do veículo ou do motorista. Entre as abordagens mais recorrentes, destacam-se a geração de alertas automáticos e a implementação de mecanismos de controle remoto.
 
@@ -390,7 +395,7 @@ Entretanto, observa-se que a implementação desses mecanismos ainda apresenta l
 
 Dessa forma, conclui-se que, embora existam diversas estratégias de atuação voltadas à segurança ativa, ainda há uma lacuna na consolidação de abordagens robustas e padronizadas, especialmente no contexto de sistemas de baixo custo.
 
-\subsection*{Q3: Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?}
+\subsubsection{Q3: Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?}
 
 A análise dos estudos selecionados indica que a integração e o processamento dos dados de telemetria seguem, em sua maioria, uma arquitetura em camadas, composta por dispositivos embarcados, infraestrutura de comunicação e plataformas externas de armazenamento e visualização.
 
@@ -414,8 +419,61 @@ Apesar dessa organização relativamente comum, observa-se uma grande variação
 Dessa forma, conclui-se que, embora exista uma tendência clara na adoção de arquiteturas em camadas para integração e visualização dos dados de telemetria, ainda há lacunas significativas relacionadas à padronização, segurança e robustez dessas soluções, especialmente no contexto de sistemas de baixo custo.
 
 
+\subsection{Comparações Críticas}
 
+A partir da análise dos estudos selecionados, alguns trabalhos se destacam pelo nível de complexidade, originalidade das soluções e impacto potencial no contexto da telemetria veicular baseada em IoT. Nesta subseção, são discutidos comparativamente os projetos mais relevantes, com foco em suas arquiteturas, estratégias de comunicação e mecanismos de segurança.
 
+O trabalho proposto por \cite{sridharan2025smart} destaca-se pela implementação de mecanismos de segurança ativa, permitindo a atuação direta sobre o veículo por meio do desligamento remoto da ignição em casos de uso não autorizado. O sistema utiliza uma abordagem híbrida de comunicação, combinando envio de dados via Wi-Fi para um banco de dados em nuvem (Firebase Realtime Database) e, como redundância, comunicação via SMS. Apesar das funcionalidades relevantes, observa-se uma limitação na infraestrutura de dados, que utiliza um banco baseado em JSON, menos robusto quando comparado a soluções relacionais. Além disso, a interface do sistema é restrita a uma aplicação móvel simples, o que pode impactar sua escalabilidade.
+
+Por sua vez, o estudo apresentado por \cite{zahid2025advanced} adota uma abordagem voltada à eficiência operacional, com foco na redução do consumo de combustível e das emissões de gases. O sistema utiliza dados coletados diretamente da porta OBD2 e apresenta uma arquitetura de comunicação mais complexa, estruturada em múltiplas camadas e protocolos. Diferentemente de outros trabalhos, não há o desenvolvimento de um dispositivo próprio de telemetria, sendo utilizado um módulo comercial já equipado com GPS e conectividade 4G. Essa abordagem simplifica a implementação, mas reduz o controle sobre o hardware.
+
+Os trabalhos de \cite{rojas2020fleet} e \cite{bolanos2022fleet} apresentam soluções baseadas na tecnologia LoRa, com foco em sistemas de transporte inteligentes (ITS). Esses projetos se destacam pela padronização e pelo conjunto abrangente de funcionalidades, incluindo monitoramento contínuo, gestão de rotas e coleta de dados operacionais. No entanto, a utilização de LoRa impõe a necessidade de uma infraestrutura física dedicada, o que limita a escalabilidade geográfica do sistema e restringe sua aplicação a regiões específicas.
+
+Por fim, o trabalho de \cite{hussain2021caretalk} apresenta uma das abordagens mais completas em termos de monitoramento da saúde do veículo. O sistema combina dados provenientes da interface OBD2 com informações de sensores adicionais, como sensores de gases e de voltagem, permitindo uma análise mais detalhada das condições do veículo. Esses dados são processados por algoritmos de aprendizagem de máquina hospedados em uma infraestrutura em nuvem, proporcionando funcionalidades avançadas de diagnóstico e previsão de falhas. Essa integração entre coleta de dados e inteligência computacional representa um diferencial significativo em relação aos demais estudos.
+
+De modo geral, observa-se que os trabalhos analisados apresentam diferentes abordagens para a implementação de sistemas de telemetria veicular, variando entre soluções mais simples e arquiteturas altamente complexas. No entanto, não há uma padronização consolidada, sendo comum a existência de limitações relacionadas à infraestrutura, escalabilidade e integração entre componentes.
+
+\subsection{Síntese dos Resultados da Literatura}
+
+A análise dos estudos selecionados permite identificar um conjunto consistente de funcionalidades, tecnologias e objetivos recorrentes no desenvolvimento de sistemas de telemetria veicular baseados em IoT. De modo geral, observa-se que a funcionalidade de localização e monitoramento de velocidade é onipresente, sendo o rastreamento do veículo o elemento central em praticamente todas as soluções propostas.
+
+Além disso, diversos trabalhos incorporam mecanismos de diagnóstico da saúde do veículo, geralmente por meio da interface OBD2, permitindo a coleta de dados internos e a geração de feedback sobre o funcionamento dos componentes. Também se destaca a presença de abordagens voltadas à eficiência operacional e redução de custos, especialmente relacionadas ao consumo de combustível e à otimização de rotas. Em menor escala, alguns sistemas incluem a análise do comportamento do motorista, utilizando dados de velocidade e condução para fins de segurança.
+
+No que diz respeito à transmissão de dados, foram identificadas quatro abordagens principais. A utilização de redes móveis, como 4G, destaca-se pela maior independência operacional e capacidade de comunicação em tempo real. A tecnologia LoRaWAN também é amplamente utilizada, especialmente em cenários que exigem baixo consumo de energia e comunicação a longas distâncias, embora dependa de infraestrutura específica. O uso de Wi-Fi aparece em contextos mais restritos, como sincronização de dados em ambientes controlados, enquanto o Bluetooth é empregado em soluções que utilizam dispositivos móveis como intermediários para processamento ou envio de dados.
+
+Quanto aos objetivos dos sistemas analisados, é possível agrupá-los em três categorias principais: segurança veicular, com foco em prevenção de furtos e controle remoto; gestão de transporte público, voltada ao monitoramento e organização de frotas; e logística industrial, com ênfase na redução de custos operacionais e aumento da eficiência.
+
+A literatura recente também evidencia avanços importantes nas estratégias de implementação desses sistemas. Observa-se uma predominância no uso de redes móveis e tecnologias como LoRa para transmissão de dados, bem como a adoção de abordagens híbridas em alguns casos, combinando diferentes meios de comunicação para aumentar a confiabilidade. Além disso, destacam-se funcionalidades avançadas, como o controle remoto de ignição via SMS e a aplicação de algoritmos de análise preditiva para identificação antecipada de falhas no veículo.
+
+Por fim, a análise dos trabalhos permite compreender diferentes estratégias de desenvolvimento de hardware, incluindo tanto a construção de dispositivos próprios quanto a utilização de módulos comerciais prontos. Essa diversidade de abordagens evidencia a flexibilidade do campo, mas também reforça a ausência de padronização na definição de arquiteturas e componentes ideais para sistemas de telemetria veicular.
+
+\subsection{Lacunas Identificadas na Literatura}
+
+A análise dos estudos selecionados evidencia a existência de diversas lacunas no desenvolvimento de sistemas de telemetria veicular baseados em IoT, especialmente no que diz respeito à padronização, robustez e maturidade das soluções propostas.
+
+Uma das principais limitações observadas é a ausência de padrões de arquitetura. Os sistemas analisados apresentam estruturas heterogêneas, dificultando a escalabilidade e a incorporação de novas funcionalidades sem a necessidade de reestruturação completa do sistema. Essa falta de padronização compromete a evolução e a integração entre diferentes soluções.
+
+Outro ponto relevante é o foco predominante no rastreamento do veículo, em detrimento de funcionalidades mais avançadas. Embora alguns trabalhos utilizem a interface OBD2 para coleta de dados internos, essa abordagem ainda apresenta limitações, uma vez que nem todos os componentes do veículo estão acessíveis por essa rede. Dessa forma, a obtenção de informações mais completas exige a utilização de sensores adicionais, o que nem sempre é considerado nos projetos analisados.
+
+No que se refere ao tratamento dos dados, observa-se uma carência significativa de análises históricas e preditivas. A maioria dos sistemas limita-se ao monitoramento em tempo real, sem explorar técnicas mais avançadas, como o uso de inteligência artificial para previsão de falhas e suporte à tomada de decisão, o que reduz o potencial desses sistemas como ferramentas proativas.
+
+Em relação às tecnologias de comunicação, foram identificadas limitações inerentes a cada abordagem. O uso de SMS apresenta restrições quanto à quantidade e complexidade dos dados transmitidos, sendo mais adequado para notificações simples. O Wi-Fi depende de infraestrutura local, restringindo a mobilidade do sistema. A rede móvel 4G, embora mais robusta, ainda enfrenta problemas de cobertura em regiões remotas ou ambientes fechados. Já a tecnologia LoRa exige a implementação de infraestrutura específica, como gateways, o que pode dificultar sua adoção em larga escala.
+
+Além disso, observa-se uma carência de validação experimental consistente nos trabalhos analisados. Muitos estudos apresentam apenas protótipos funcionais, sem a realização de testes robustos ou em condições reais de uso. Em alguns casos, sequer há validação em veículos reais, o que compromete a confiabilidade dos resultados apresentados.
+
+Por fim, destaca-se a simplicidade excessiva das soluções propostas como uma das lacunas mais evidentes. Diversos trabalhos concentram-se exclusivamente no desenvolvimento do dispositivo de telemetria, negligenciando aspectos fundamentais como a interface com o usuário e a integração com plataformas de visualização. Como resultado, muitos sistemas apresentam funcionalidades limitadas e não atingem um nível de maturidade adequado para aplicação prática, evidenciando a necessidade de abordagens mais completas e integradas.
+
+\section{Considerações Finais}
+
+Este trabalho apresentou uma revisão da literatura sobre sistemas de telemetria veicular baseados em Internet das Coisas (IoT), com o objetivo de analisar as arquiteturas de hardware, as estratégias de atuação e os métodos de integração e visualização de dados empregados nas soluções recentes.
+
+A análise dos estudos permitiu identificar que o uso de microcontroladores de baixo custo, como ESP32 e Arduino, é predominante, frequentemente associado a módulos de comunicação como redes móveis e LoRa. Observou-se também que a funcionalidade de rastreamento em tempo real é amplamente consolidada, enquanto outras capacidades, como diagnóstico da saúde do veículo e análise de comportamento do motorista, aparecem de forma complementar e menos explorada.
+
+No que se refere à segurança ativa, verificou-se que algumas soluções já incorporam mecanismos de atuação direta, como o controle remoto de ignição, embora essas funcionalidades ainda não sejam amplamente difundidas. Em relação à integração de dados, destaca-se o uso de plataformas em nuvem e aplicações web ou móveis, ainda que muitas implementações apresentem limitações em termos de escalabilidade e padronização.
+
+A revisão também evidenciou lacunas importantes, como a ausência de padrões arquiteturais, a baixa adoção de técnicas de análise preditiva, a limitação das infraestruturas de comunicação em determinados cenários e a carência de validação experimental robusta. Além disso, muitos trabalhos apresentam soluções simplificadas, com foco restrito a funcionalidades específicas, sem considerar o sistema de forma integrada.
+
+Diante desse cenário, conclui-se que, embora haja avanços significativos no desenvolvimento de sistemas de telemetria veicular baseados em IoT, ainda existe um amplo espaço para evolução. Como trabalhos futuros, destaca-se a necessidade de desenvolvimento de arquiteturas mais padronizadas e escaláveis, a integração de técnicas de inteligência artificial para análise de dados e a construção de soluções completas que considerem, de forma integrada, hardware, comunicação e interfaces de usuário. Tais avanços são fundamentais para viabilizar sistemas mais eficientes, acessíveis e aplicáveis em contextos reais.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -438,9 +496,13 @@ Dessa forma, conclui-se que, embora exista uma tendência clara na adoção de a
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\vspace{20pt}
 % \bibliographystyle{IEEEtran}
+\postextual
+\vspace{40pt}
+% \setlength{\beforechapskip}{10pt} % Remove espaços de capítulo se houver
+\setlength{\afterchapskip}{10pt} % Ajusta o espaço após o título "Referências"
 \bibliography{refs}
+
 
 % ----------------------------------------------------------
 % Glossário

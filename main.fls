@@ -285,6 +285,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\titlesec\titlesec.sty
 OUTPUT main.idx
 INPUT .\main.aux
 INPUT .\main.aux
@@ -407,5 +409,7 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb

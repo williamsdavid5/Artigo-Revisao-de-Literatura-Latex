@@ -5,6 +5,13 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Bola{\~n}os et al. 2022]{bolanos2022fleet}
+\abntrefinfo{Bola{\~n}os et al.}{BOLA{\~N}OS et al.}{2022}
+{BOLA{\~N}OS, C. et al. Fleet management and control system for developing
+  countries implemented with intelligent transportation systems (its) services.
+\emph{Transportation Research Interdisciplinary Perspectives}, Elsevier, v.~16,
+  p. 100694, 2022.}
+
 \bibitem[Hussain, Mahmud e Yang 2021]{hussain2021caretalk}
 \abntrefinfo{Hussain, Mahmud e Yang}{HUSSAIN; MAHMUD; YANG}{2021}
 {HUSSAIN, S.; MAHMUD, U.; YANG, S. Car e-talk: An iot-enabled cloud-assisted
@@ -20,11 +27,23 @@
   IEEE, 2024.
 ISBN 979-8-3315-4066-1.}
 
-\bibitem[Sridharan, Vamsi e Lakshmanan 2025]{sridharan2025smart}
-\abntrefinfo{Sridharan, Vamsi e Lakshmanan}{SRIDHARAN; VAMSI; LAKSHMANAN}{2025}
-{SRIDHARAN, P.; VAMSI, Y. V.~V.; LAKSHMANAN, S.~A. Smart vehicle security
-  system: Real-time tracking and theft prevention with iot. In:
-  \emph{Proceedings of the 2025 Innovations in Power and Advanced Computing
-  Technologies (i-PACT)}. [S.l.]: IEEE, 2025.}
+\bibitem[Rojas et al. 2020]{rojas2020fleet}
+\abntrefinfo{Rojas et al.}{ROJAS et al.}{2020}
+{ROJAS, B. et al. Fleet management and control system for medium-sized cities
+  based in intelligent transportation systems: From review to proposal in a
+  city.
+\emph{Electronics}, MDPI, v.~9, n.~1383, 2020.}
+
+\bibitem[Sridharan et al. 2025]{sridharan2025smart}
+\abntrefinfo{Sridharan et al.}{SRIDHARAN et al.}{2025}
+{SRIDHARAN, P. et al. Smart vehicle security system: Real-time tracking and
+  theft prevention with iot. In:  \emph{2025 Innovations in Power and Advanced
+  Computing Technologies (i-PACT)}. Chennai, India: IEEE, 2025.}
+
+\bibitem[Zahid et al. 2025]{zahid2025advanced}
+\abntrefinfo{Zahid et al.}{ZAHID et al.}{2025}
+{ZAHID, A. et al. Advanced fleet management systems: Iot and gvrp for greener
+  logistics.
+\emph{IFAC PapersOnLine}, Elsevier, v.~59, n.~10, p. 817--822, 2025.}
 
 \end{thebibliography}
