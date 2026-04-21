@@ -60,6 +60,8 @@
 
 \usepackage{tcolorbox}
 \usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
 
 % ---
 % Configurações do pacote backref
@@ -222,9 +224,9 @@ Esta pesquisa caracteriza-se como uma revisão de literatura de natureza qualita
 Com o intuito de direcionar a análise e garantir a consistência da revisão, foram definidas as seguintes perguntas de pesquisa:
 
 \begin{itemize}
-   \item Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?
-   \item Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?
-   \item Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?
+   \item Q1: Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?
+   \item Q2: Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?
+   \item Q3: Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?
 \end{itemize}
 
 \subsection{Estratégia de Busca}
@@ -337,163 +339,83 @@ Diante desse cenário, os critérios de inclusão e exclusão, bem como os crit�
 
 Ressalta-se que todo o processo metodológico foi previamente estruturado por meio de um protocolo de revisão de literatura, no qual estão detalhadas as estratégias de busca, incluindo palavras-chave utilizadas, combinações de termos, lista de trabalhos encontrados, links de acesso e demais informações complementares.\footnote{Protocolo de revisão de literatura disponível em: \url{https://drive.google.com/file/d/1ycxy1grOSLdAdATd5NtJrtUyO6gxBmgF/view?usp=sharing}}
 
-% ----------------------------------------------------------
-% Seção de explicações
-% ----------------------------------------------------------
-\section{Exemplos de comandos}
+\section{Resultados e Discussões}
 
-\subsection{Margens}
+Esta seção apresenta a análise dos estudos selecionados, com base nas perguntas de pesquisa definidas anteriormente. A discussão foi estruturada de forma a responder cada questão individualmente, a partir dos dados extraídos dos artigos analisados, permitindo a identificação de padrões, tendências e lacunas na literatura.
 
-A norma ABNT NBR 6022:2003 não estabelece uma margem específica a ser utilizada
-no artigo científico. Dessa maneira, caso deseje alterar as margens, utilize os
-comandos abaixo:
+\subsection*{Q1: Quais são as arquiteturas de hardware predominantes em sistemas de telemetria veicular de baixo custo?}
 
-\begin{verbatim}
-   \setlrmarginsandblock{3cm}{3cm}{*}
-   \setulmarginsandblock{3cm}{3cm}{*}
-   \checkandfixthelayout
-\end{verbatim}
+A análise dos estudos selecionados evidencia que a maioria das soluções de telemetria veicular de baixo custo é baseada em arquiteturas embarcadas utilizando microcontroladores de fácil acesso e ampla adoção no meio acadêmico e experimental. Entre os principais dispositivos identificados, destacam-se plataformas como ESP32, Arduino e Raspberry Pi, utilizadas de forma isolada ou combinada, dependendo da complexidade do sistema proposto.
 
-\subsection{Duas colunas}
+Observou-se que o uso de microcontroladores como o ESP32 é predominante em sistemas que exigem conectividade integrada, devido à presença nativa de Wi-Fi e Bluetooth, o que reduz a necessidade de módulos adicionais e contribui para a diminuição do custo e da complexidade do hardware. Já plataformas como Arduino são frequentemente utilizadas em conjunto com módulos externos, como GPS, GSM e sensores diversos, compondo arquiteturas modulares.
 
-É comum que artigos científicos sejam escritos em duas colunas. Para isso,
-adicione a opção \texttt{twocolumn} à classe do documento, como no exemplo:
+Além disso, alguns estudos adotam abordagens híbridas, combinando diferentes dispositivos para divisão de responsabilidades no sistema. Nesses casos, um microcontrolador pode ser responsável pela coleta de dados de sensores, enquanto outro dispositivo realiza o processamento ou a comunicação com servidores externos. Essa estratégia é especialmente utilizada quando há limitações de memória ou processamento em dispositivos individuais.
 
-\begin{verbatim}
-   \documentclass[article,11pt,oneside,a4paper,twocolumn]{abntex2}
-\end{verbatim}
+A Figura \ref{fig:caretalk} ilustra uma das arquiteturas representativas identificadas nos estudos analisados, evidenciando a integração entre módulos embarcados, infraestrutura de comunicação e serviços em nuvem.
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.8\linewidth]{images/figura_caretalk.jpg}
+   \caption{Arquitetura do sistema Car e-Talk para manutenção inteligente de frotas. Fonte: Adaptado de \cite{hussain2021caretalk}.}
+   \label{fig:caretalk}
+\end{figure}
 
-É possível indicar pontos do texto que se deseja manter em apenas uma coluna,
-geralmente o título e os resumos. Os resumos em única coluna em documentos com
-a opção \texttt{twocolumn} devem ser escritos no ambiente
-\texttt{resumoumacoluna}:
+Outro ponto relevante identificado é a forte presença de módulos periféricos essenciais para o funcionamento da telemetria, como receptores GPS para geolocalização, módulos de comunicação (GSM, 4G ou LoRa) para transmissão de dados, e sensores específicos para coleta de informações do veículo, como velocidade, aceleração ou estado de componentes.
 
-\begin{verbatim}
-   \twocolumn[              % INICIO DE ARTIGO EM DUAS COLUNAS
+Apesar da diversidade de arquiteturas encontradas, observa-se uma tendência à simplificação dos sistemas, priorizando soluções de baixo custo e fácil implementação. No entanto, essa simplificação frequentemente resulta em limitações relacionadas à escalabilidade, robustez e padronização das soluções propostas.
 
-     \maketitle             % pagina de titulo
+Dessa forma, conclui-se que, embora exista uma convergência no uso de microcontroladores acessíveis como base das arquiteturas de telemetria veicular, ainda há uma grande heterogeneidade na forma como esses componentes são integrados, evidenciando a ausência de padrões consolidados na literatura.
 
-     \renewcommand{\resumoname}{Nome do resumo}
-     \begin{resumoumacoluna}
-        Texto do resumo.
-      
-        \vspace{\onelineskip}
- 
-        \noindent
-        \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
-     \end{resumoumacoluna}
-   
-   ]                        % FIM DE ARTIGO EM DUAS COLUNAS
-\end{verbatim}
+\subsection*{Q2: Quais estratégias de atuação são utilizadas para implementar mecanismos de segurança ativa, como controle de ignição e geração de alertas automáticos?}
 
-\subsection{Recuo do ambiente \texttt{citacao}}
+A análise dos estudos selecionados demonstra que os sistemas de telemetria veicular baseados em IoT incorporam diferentes estratégias de atuação com o objetivo de promover segurança ativa, atuando diretamente no comportamento do veículo ou do motorista. Entre as abordagens mais recorrentes, destacam-se a geração de alertas automáticos e a implementação de mecanismos de controle remoto.
 
-Na produção de artigos (opção \texttt{article}), pode ser útil alterar o recuo
-do ambiente \texttt{citacao}. Nesse caso, utilize o comando:
+Os alertas automáticos são amplamente utilizados como forma de intervenção indireta, sendo acionados a partir de condições específicas identificadas pelos sistemas, como excesso de velocidade, saída de áreas delimitadas (geocercas) ou detecção de eventos anômalos. Esses alertas podem ser enviados ao motorista, ao gestor da frota ou a sistemas externos, por meio de notificações em aplicações móveis, interfaces web ou mensagens via rede celular.
 
-\begin{verbatim}
-   \setlength{\ABNTEXcitacaorecuo}{1.8cm}
-\end{verbatim}
+Por outro lado, estratégias de atuação direta também são observadas, especialmente em sistemas que implementam controle remoto de ignição ou bloqueio do veículo. Nesses casos, o sistema é capaz de intervir ativamente no funcionamento do veículo, interrompendo seu uso em situações específicas, como roubo, uso não autorizado ou violação de limites operacionais previamente definidos.
 
-Quando um documento é produzido com a opção \texttt{twocolumn}, a classe
-\textsf{abntex2} automaticamente altera o recuo padrão de 4 cm, definido pela
-ABNT NBR 10520:2002 seção 5.3, para 1.8 cm.
+Por outro lado, estratégias de atuação direta também são observadas, especialmente em sistemas que implementam controle remoto de ignição ou bloqueio do veículo. Nesses casos, o sistema é capaz de intervir ativamente no funcionamento do veículo, interrompendo seu uso em situações específicas, como roubo, uso não autorizado ou violação de limites operacionais previamente definidos.
 
-\section{Cabeçalhos e rodapés customizados}
+Como exemplo de aplicação desse tipo de estratégia, a Figura \ref{fig:ignicao_iot} apresenta um sistema de rastreamento e monitoramento veicular que incorpora mecanismos de controle remoto de ignição, permitindo a atuação direta sobre o funcionamento do veículo.
 
-Diferentes estilos de cabeçalhos e rodapés podem ser criados usando os
-recursos padrões do \textsf{memoir}.
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.6\linewidth]{images/controleDeIgnicao.jpg}
+   \caption{Sistema de rastreamento veicular com controle de ignição \cite{jeevan2024gps}.}
+   \label{fig:ignicao_iot}
+\end{figure}
 
-Um estilo próprio de cabeçalhos e rodapés pode ser diferente para páginas pares
-e ímpares. Observe que a diferenciação entre páginas pares e ímpares só é
-utilizada se a opção \texttt{twoside} da classe \textsf{abntex2} for utilizado.
-Caso contrário, apenas o cabeçalho padrão da página par (\emph{even}) é usado.
+Além dessas abordagens, alguns estudos apresentam mecanismos mais sofisticados de interação, como a adaptação dinâmica de limites de velocidade com base na localização do veículo ou nas condições do ambiente. Essas estratégias indicam uma evolução dos sistemas de telemetria de um papel puramente monitoramento para um modelo mais proativo e orientado à prevenção de riscos.
 
-Veja o exemplo abaixo cria um estilo chamado \texttt{meuestilo}. O código deve
-ser inserido no preâmbulo do documento.
+Entretanto, observa-se que a implementação desses mecanismos ainda apresenta limitações significativas, principalmente no que diz respeito à confiabilidade, segurança das comunicações e padronização das formas de atuação. Em muitos casos, as soluções propostas são experimentais e carecem de validação em cenários reais, o que compromete sua aplicação em larga escala.
 
-\begin{verbatim}
-%%criar um novo estilo de cabeçalhos e rodapés
-\makepagestyle{meuestilo}
-  %%cabeçalhos
-  \makeevenhead{meuestilo} %%pagina par
-     {topo par à esquerda}
-     {centro \thepage}
-     {direita}
-  \makeoddhead{meuestilo} %%pagina ímpar ou com oneside
-     {topo ímpar/oneside à esquerda}
-     {centro\thepage}
-     {direita}
-  \makeheadrule{meuestilo}{\textwidth}{\normalrulethickness} %linha
-  %% rodapé
-  \makeevenfoot{meuestilo}
-     {rodapé par à esquerda} %%pagina par
-     {centro \thepage}
-     {direita} 
-  \makeoddfoot{meuestilo} %%pagina ímpar ou com oneside
-     {rodapé ímpar/onside à esquerda}
-     {centro \thepage}
-     {direita}
-\end{verbatim}
+Dessa forma, conclui-se que, embora existam diversas estratégias de atuação voltadas à segurança ativa, ainda há uma lacuna na consolidação de abordagens robustas e padronizadas, especialmente no contexto de sistemas de baixo custo.
 
-Para usar o estilo criado, use o comando abaixo imediatamente após um dos
-comandos de divisão do documento. Por exemplo:
+\subsection*{Q3: Como os dados de telemetria são integrados, processados e visualizados em plataformas externas, como sistemas em nuvem, aplicações web e interfaces móveis?}
 
-\begin{verbatim}
-   \begin{document}
-     %%usar o estilo criado na primeira página do artigo:
-     \pretextual
-     \pagestyle{meuestilo}
-     
-     \maketitle
-     ...
-     
-     %%usar o estilo criado nas páginas textuais
-     \textual
-     \pagestyle{meuestilo}
-     
-     \chapter{Novo capítulo}
-     ...
-   \end{document}  
-\end{verbatim}
+A análise dos estudos selecionados indica que a integração e o processamento dos dados de telemetria seguem, em sua maioria, uma arquitetura em camadas, composta por dispositivos embarcados, infraestrutura de comunicação e plataformas externas de armazenamento e visualização.
 
-Outras informações sobre cabeçalhos e rodapés estão disponíveis na seção 7.3 do
-manual do \textsf{memoir} \cite{memoir}.
+Na camada de aquisição, os dados são coletados por sensores e módulos embarcados no veículo, sendo posteriormente transmitidos por meio de diferentes tecnologias de comunicação. Entre as abordagens mais comuns, destacam-se o uso de redes celulares (como GSM e 4G) e, em menor escala, tecnologias de baixo consumo e longo alcance, como LoRa. A escolha da tecnologia de comunicação está diretamente relacionada a fatores como custo, cobertura e necessidade de transmissão em tempo real.
 
-\section{Mais exemplos no Modelo Canônico de Trabalhos Acadêmicos}
+Na camada de processamento e armazenamento, observa-se uma predominância do uso de servidores em nuvem ou plataformas remotas, responsáveis por receber, armazenar e organizar os dados enviados pelos dispositivos. Em alguns casos, são utilizados bancos de dados relacionais ou não relacionais, além de APIs para intermediar a comunicação entre os dispositivos e as aplicações finais. Essa estrutura permite maior escalabilidade e facilita a integração com diferentes interfaces de usuário.
 
-Este modelo de artigo é limitado em número de exemplos de comandos, pois são
-apresentados exclusivamente comandos diretamente relacionados com a produção de
-artigos.
+No que se refere à visualização, os dados são geralmente apresentados por meio de aplicações web ou móveis, que oferecem funcionalidades como monitoramento em tempo real, histórico de trajetos, geração de relatórios e visualização em mapas. Interfaces baseadas em dashboards são frequentemente utilizadas para consolidar as informações e permitir a análise por parte dos usuários.
 
-Para exemplos adicionais de \abnTeX\ e \LaTeX, como inclusão de figuras,
-fórmulas matemáticas, citações, e outros, consulte o documento
-\citeonline{abntex2modelo}.
+Como exemplo de interface e integração de dados em sistemas de telemetria, a Figura \ref{fig:smart_security} apresenta uma solução que combina rastreamento em tempo real com funcionalidades de segurança veicular baseadas em IoT.
 
-\section{Consulte o manual da classe \textsf{abntex2}}
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.8\linewidth]{images/arquitetura_exemplo.jpg}
+   \caption{Sistema de segurança veicular com rastreamento em tempo real baseado em IoT \cite{sridharan2025smart}.}
+   \label{fig:smart_security}
+\end{figure}
 
-Consulte o manual da classe \textsf{abntex2} \cite{abntex2classe} para uma
-referência completa das macros e ambientes disponíveis.
+Apesar dessa organização relativamente comum, observa-se uma grande variação no nível de complexidade e maturidade das soluções propostas. Muitos sistemas apresentam arquiteturas simplificadas, com pouca preocupação com escalabilidade, segurança da informação e padronização da comunicação entre os componentes. Além disso, a integração entre as diferentes camadas nem sempre é bem definida, o que pode comprometer a confiabilidade e a eficiência do sistema como um todo.
 
-% ---
-% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
-% ---
-\bookmarksetup{startatroot}% 
-% ---
+Dessa forma, conclui-se que, embora exista uma tendência clara na adoção de arquiteturas em camadas para integração e visualização dos dados de telemetria, ainda há lacunas significativas relacionadas à padronização, segurança e robustez dessas soluções, especialmente no contexto de sistemas de baixo custo.
 
-% ---
-% Conclusão
-% ---
-\section*{Considerações finais}
-\addcontentsline{toc}{section}{Considerações finais}
 
-\lipsum[1]
 
-\begin{citacao}
-   \lipsum[2]
-\end{citacao}
 
-\lipsum[3]
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -511,26 +433,13 @@ referência completa das macros e ambientes disponíveis.
 % \emptythanks
 % \maketitle
 
-% resumo em português
-\renewcommand{\resumoname}{Abstract}
-\begin{resumoumacoluna}
-   \begin{otherlanguage*}{english}
-      According to ABNT NBR 6022:2003, an abstract in foreign language is a back
-      matter mandatory element.
 
-      \vspace{\onelineskip}
-
-      \noindent
-      \textbf{Key-words}: latex. abntex.
-   \end{otherlanguage*}
-\end{resumoumacoluna}
-
-% ]  				% FIM DE ARTIGO EM DUAS COLUNAS
-% ---
 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
+\vspace{20pt}
+% \bibliographystyle{IEEEtran}
 \bibliography{refs}
 
 % ----------------------------------------------------------
@@ -542,41 +451,8 @@ referência completa das macros e ambientes disponíveis.
 %
 %\glossary
 
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
 
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
 
-   % ----------------------------------------------------------
-   \chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-     ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-   % ----------------------------------------------------------
-   \lipsum[55-57]
 
-\end{apendicesenv}
-% ---
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-\cftinserthook{toc}{AAA}
-% ---
-% Inicia os anexos
-% ---
-%\anexos
-\begin{anexosenv}
-
-   % ---
-   \chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-     parturient montes nascetur ridiculus mus}
-   % ---
-
-   \lipsum[31]
-
-\end{anexosenv}
 
 \end{document}

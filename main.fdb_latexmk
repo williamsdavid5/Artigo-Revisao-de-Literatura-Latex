@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex main"] 1776775983.24863 "main.aux" "main.bbl" "main" 1776775986.1514 0
-  "./refs.bib" 1775669022 12072 3728a03e881662bee00e0740e01bac52 ""
+["bibtex main"] 1776796955.11322 "main.aux" "main.bbl" "main" 1776796996.02916 0
+  "./refs.bib" 1776796815 1281 afdb6a8179612949d4a3251fb511f7fb ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1776775985 13452 82ed2c50008382f467d6aaadcfe86d44 "pdflatex"
+  "main.aux" 1776796994 7752 40718278db7d9f16158ef050aa79bf91 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1776694900.06694 "main.idx" "main.ind" "main" 1776775986.15099 0
-  "main.idx" 1776775984 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1776780394.63782 "main.idx" "main.ind" "main" 1776796996.02873 0
+  "main.idx" 1776796994 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1776775983.51691 "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" "main.pdf" "main" 1776775986.15187 0
+["pdflatex"] 1776796992.83126 "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" "main.pdf" "main" 1776796996.02968 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc" 1256929440 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -30,8 +30,6 @@
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmri12.tfm" 1256929440 17144 271aaf9ebb339934b04110dc5211fba4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmss10.tfm" 1256929440 11176 53ebf7a171df1f9447b387b178768bb5 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmss12.tfm" 1256929440 11232 955a7245396175d9219648eadc654ac9 ""
-  "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmtt10.tfm" 1256929440 1372 2ef2c2b492b3c4cd7879fe083abbb061 ""
-  "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmtt12.tfm" 1256929440 1368 6a60e6a5e029141041d64d339b87e533 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/lmex10.tfm" 1256929440 992 ce925c9346c7613270a79afbee98c070 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/lmmi10.tfm" 1256929440 1528 6d36b2385e0ca062a654de6ac59cb34f ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/lmmi12.tfm" 1256929440 1524 753b192b18f2991794f9d41a8228510b ""
@@ -60,10 +58,7 @@
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb" 1256929440 121065 ba8daf2228d9e511988917831f1e22e9 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb" 1256929440 112593 fda2373ba4420af33949610de4c28fe8 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb" 1256929440 109265 e6c7d377db6dfccd4a123fb26da8cffb ""
-  "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss10.pfb" 1256929440 97408 f595704ec2a07246c2d6f7b602587452 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb" 1256929440 96107 daf52840b555e3b38f9679b629b5e2df ""
-  "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb" 1256929440 113227 d3d1adc024746ff57b20efba82c6d365 ""
-  "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb" 1256929440 110323 19372944fba298bb4c4758abff959582 ""
   "C:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Program Files/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Program Files/MiKTeX/tex/generic/babel/babel.sty" 1704647332 150008 7a05b0fdc0167c04e192003e780ab195 ""
@@ -155,6 +150,7 @@
   "C:/Program Files/MiKTeX/tex/latex/environ/environ.sty" 1399192161 4378 f429f0da968c278653359293040a8f52 ""
   "C:/Program Files/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Program Files/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601897756 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "C:/Program Files/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/Program Files/MiKTeX/tex/latex/graphics-cfg/color.cfg" 1465894292 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "C:/Program Files/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465894292 1224 978390e9c2234eab29404bc21b268d1e ""
   "C:/Program Files/MiKTeX/tex/latex/graphics-def/pdftex.def" 1663918690 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -192,7 +188,6 @@
   "C:/Program Files/MiKTeX/tex/latex/lm/ot1lmr.fd" 1430474546 1882 28c08db1407ebff35a658fd141753d16 ""
   "C:/Program Files/MiKTeX/tex/latex/lm/t1lmr.fd" 1430474546 1867 996fe743d88a01aca041ed22cc10e1bb ""
   "C:/Program Files/MiKTeX/tex/latex/lm/t1lmss.fd" 1430474546 1641 f48673bce41ac279099d0c9523459753 ""
-  "C:/Program Files/MiKTeX/tex/latex/lm/t1lmtt.fd" 1430474546 2682 555da1faa2e266801e4b221d01a42cb5 ""
   "C:/Program Files/MiKTeX/tex/latex/lm/ts1lmr.fd" 1430474546 1914 884882d7ebb0fd65cea93fca77ff6f5a ""
   "C:/Program Files/MiKTeX/tex/latex/memoir/mem11.clo" 1759397544 4242 9ff7bd3723304afce8b23ef013cf0493 ""
   "C:/Program Files/MiKTeX/tex/latex/memoir/memhfixc.sty" 1759397544 7470 55b459425293b534fa5086ae7bb9b274 ""
@@ -228,12 +223,15 @@
   "C:/Program Files/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760473305 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/david/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760473575 24215232 fd503d8d254be5807613177266cb1b78 ""
-  "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" 1776775979 27254 6d78697e927ccab17e3ee3421b7b8a2b ""
-  "main.aux" 1776775985 13452 82ed2c50008382f467d6aaadcfe86d44 "pdflatex"
-  "main.bbl" 1776775983 1178 d13fe64881f6e2b2f9fdf7f5f7929e25 "bibtex main"
-  "main.brf" 1776775985 134 944a13ad18bf7ea5809ca07ec8063164 "pdflatex"
-  "main.ind" 1776694900 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.tex" 1776775979 27254 6d78697e927ccab17e3ee3421b7b8a2b ""
+  "c:/Backup/projetos-programação-web/Telemetria_Revisao_Literatura/main.tex" 1776796992 31138 05f62d2dc514f662b17f16e05481dae7 ""
+  "images/arquitetura_exemplo.jpg" 1776778792 120379 4eb62287bc7879c110e6aa501a6232e2 ""
+  "images/controleDeIgnicao.jpg" 1776796610 73598 f1b43fa96d7c515ee4e3316b3c3b7afe ""
+  "images/figura_caretalk.jpg" 1776778858 43055 24064500edeac017f55bc3f47691d043 ""
+  "main.aux" 1776796994 7752 40718278db7d9f16158ef050aa79bf91 "pdflatex"
+  "main.bbl" 1776796955 1407 66ca580c219a1dc13aa3fac909726591 "bibtex main"
+  "main.brf" 1776796994 149 cf49b13ce29e4d6b04a7ad8f94c92eef "pdflatex"
+  "main.ind" 1776780394 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.tex" 1776796992 31138 05f62d2dc514f662b17f16e05481dae7 ""
   (generated)
   "main.aux"
   "main.brf"

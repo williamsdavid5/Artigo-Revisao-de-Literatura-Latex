@@ -5,24 +5,26 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[abnTeX2 2013]{abntex2modelo}
-\abntrefinfo{abnTeX2}{ABNTEX2}{2013}
-{ABNTEX2. \emph{Modelo Can{\^o}nico de Trabalho Acad{\^e}mico com abnTeX2}.
-[S.l.], 2013. Dispon{\'\i}vel em: \url{http://abntex2.googlecode.com/}.}
+\bibitem[Hussain, Mahmud e Yang 2021]{hussain2021caretalk}
+\abntrefinfo{Hussain, Mahmud e Yang}{HUSSAIN; MAHMUD; YANG}{2021}
+{HUSSAIN, S.; MAHMUD, U.; YANG, S. Car e-talk: An iot-enabled cloud-assisted
+  smart fleet maintenance system.
+\emph{IEEE Internet of Things Journal}, v.~8, n.~12, p. 9484--9494, 2021.}
 
-\bibitem[abnTeX2 e Araujo 2013]{abntex2classe}
-\abntrefinfo{abnTeX2 e Araujo}{ABNTEX2; ARAUJO}{2013}
-{ABNTEX2; ARAUJO, L.~C. \emph{A classe abntex2: Modelo can{\^o}nico de
-  trabalhos acad{\^e}micos brasileiros compat{\'\i}vel com as normas ABNT NBR
-  14724:2011, ABNT NBR 6024:2012 e outras}.
-[S.l.], 2013. Dispon{\'\i}vel em: \url{http://abntex2.googlecode.com/}.}
+\bibitem[Jeevan et al. 2024]{jeevan2024gps}
+\abntrefinfo{Jeevan et al.}{JEEVAN et al.}{2024}
+{JEEVAN, S. et al. Gps based efficient real time vehicle tracking and
+  monitoring system using two factor authentication and internet of things
+  (iot). In:  \emph{Proceedings of the Second International Conference on
+  Intelligent Cyber Physical Systems and Internet of Things (ICoICI)}. [S.l.]:
+  IEEE, 2024.
+ISBN 979-8-3315-4066-1.}
 
-\bibitem[Wilson e Madsen 2010]{memoir}
-\abntrefinfo{Wilson e Madsen}{WILSON; MADSEN}{2010}
-{WILSON, P.; MADSEN, L. \emph{The Memoir Class for Configurable Typesetting -
-  User Guide}.
-Normandy Park, WA, 2010. Dispon{\'\i}vel em:
-  \url{http://mirrors.ctan.org/macros/latex/contrib/memoir/memman.pdf}. Acesso
-  em: 19 dez. 2012.}
+\bibitem[Sridharan, Vamsi e Lakshmanan 2025]{sridharan2025smart}
+\abntrefinfo{Sridharan, Vamsi e Lakshmanan}{SRIDHARAN; VAMSI; LAKSHMANAN}{2025}
+{SRIDHARAN, P.; VAMSI, Y. V.~V.; LAKSHMANAN, S.~A. Smart vehicle security
+  system: Real-time tracking and theft prevention with iot. In:
+  \emph{Proceedings of the 2025 Innovations in Power and Advanced Computing
+  Technologies (i-PACT)}. [S.l.]: IEEE, 2025.}
 
 \end{thebibliography}

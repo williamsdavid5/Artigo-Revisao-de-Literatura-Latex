@@ -283,6 +283,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
 OUTPUT main.idx
 INPUT .\main.aux
 INPUT .\main.aux
@@ -353,12 +355,27 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\figura_caretalk.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\controleDeIgnicao.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
+INPUT .\images\arquitetura_exemplo.jpg
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -368,6 +385,7 @@ INPUT main.brf
 INPUT .\main.brf
 INPUT .\main.brf
 OUTPUT main.brf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT main.aux
 INPUT .\main.brf
 INPUT .\main.brf
@@ -389,11 +407,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
