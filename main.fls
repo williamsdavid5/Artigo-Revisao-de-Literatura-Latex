@@ -335,6 +335,7 @@ INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Users\david\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
@@ -357,6 +358,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT .\images\figura_caretalk.jpg
 INPUT .\images\figura_caretalk.jpg
 INPUT .\images\figura_caretalk.jpg
@@ -387,7 +389,6 @@ INPUT main.brf
 INPUT .\main.brf
 INPUT .\main.brf
 OUTPUT main.brf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT main.aux
 INPUT .\main.brf
 INPUT .\main.brf

@@ -87,7 +87,10 @@
 % ---
 % ---
 \titulo{Avaliação experimental de uma arquitetura IoT de baixo custo para telemetria veicular e segurança ativa baseada em Geocercas}
-\tituloestrangeiro{Experimental evaluation of a low-cost IoT architecture for vehicle telemetry and active security based on geofences.}
+
+% \tituloestrangeiro{\textit{Experimental evaluation of a low-cost IoT architecture for vehicle telemetry and active security based on geofences}}
+\tituloestrangeiro{Experimental evaluation of a low-cost IoT architecture for vehicle telemetry and active security based on geofences}
+
 \autor{WILLIAMS DAVID ESTUMANO DUARTE \\ \protect\normalfont\small Universidade Federal do Pará -- Campus Universitário de Tucuruí (CAMTUC) \\ Núcleo de Desenvolvimento Amazônico em Engenharia (NDAE)}
 \local{Tucuruí, PA}
 \data{2026}
@@ -171,7 +174,7 @@
 
 % resumo em português
 \begin{resumoumacoluna}
-   O avanço da Internet das Coisas (IoT) tem transformado significativamente o cenário da telemetria veicular e da gestão de frotas, permitindo uma transição de sistemas de rastreamento passivos para soluções de monitoramento em tempo real altamente integradas. No entanto, o desenvolvimento de sistemas que combinam segurança ativa (como geocercas e interrupção remota de ignição) com viabilidade econômica ainda enfrenta desafios técnicos e de padronização. Muitas soluções comerciais atuais possuem custos elevados, o que motiva a pesquisa por arquiteturas de hardware de baixo custo baseadas em microcontroladores acessíveis, como o ESP32, Arduino e Raspberry Pi. Além da questão do hardware, a eficácia desses sistemas depende de estratégias de comunicação robustas, que variam desde o uso de redes móveis 4G/LTE até protocolos de longo alcance e baixo consumo, como o LoRaWAN. Este trabalho apresenta uma revisão da literatura com o objetivo de analisar o estado da arte desses sistemas, identificando as arquiteturas predominantes, as estratégias de atuação e como os dados são integrados em plataformas externas. A análise busca mapear as limitações técnicas e as lacunas de segurança, fornecendo uma base sólida para o desenvolvimento de novas soluções de telemetria que sejam, ao mesmo tempo, acessíveis e eficientes na proteção de ativos veiculares.
+   O avanço da Internet das Coisas (IoT - \textit{Internet of Things}) tem transformado significativamente o cenário da telemetria veicular e da gestão de frotas, permitindo uma transição de sistemas de rastreamento passivos para soluções de monitoramento em tempo real altamente integradas. No entanto, o desenvolvimento de sistemas que combinam segurança ativa (como geocercas e interrupção remota de ignição) com viabilidade econômica ainda enfrenta desafios técnicos e de padronização. Muitas soluções comerciais atuais possuem custos elevados, o que motiva a pesquisa por arquiteturas de hardware de baixo custo baseadas em microcontroladores acessíveis, como o ESP32, Arduino e Raspberry Pi. Além da questão do hardware, a eficácia desses sistemas depende de estratégias de comunicação robustas, que variam desde o uso de redes móveis 4G/LTE (Long Term Evolution) até protocolos de longo alcance e baixo consumo, como o LoRaWAN (\textit{Long Range Wide Area Network}). Este trabalho apresenta uma revisão da literatura com o objetivo de analisar o estado da arte desses sistemas, identificando as arquiteturas predominantes, as estratégias de atuação e como os dados são integrados em plataformas externas. A análise busca mapear as limitações técnicas e as lacunas de segurança, fornecendo uma base sólida para o desenvolvimento de novas soluções de telemetria que sejam, ao mesmo tempo, acessíveis e eficientes na proteção de ativos veiculares.
 
    \vspace{\onelineskip}
 
@@ -233,13 +236,9 @@ Com o intuito de direcionar a análise e garantir a consistência da revisão, f
 
 \subsection{Estratégia de Busca}
 
-A estratégia de busca foi definida com o objetivo de identificar estudos relevantes relacionados à telemetria veicular baseada em Internet das Coisas (IoT), com foco em arquiteturas de baixo custo e mecanismos de segurança. As buscas foram realizadas nas bases de dados Google Acadêmico e IEEE Xplore, considerando publicações no período de 2020 a 2026.
+A estratégia de busca visou identificar estudos relevantes sobre telemetria veicular baseada em IoT, com foco em arquiteturas de baixo custo e segurança. As consultas foram realizadas nas bases Google Acadêmico e IEEE Xplore (Institute of Electrical and Electronics Engineers), abrangendo publicações de 2020 a 2026.
 
-Inicialmente, foi elaborada uma string de busca abrangente, contendo palavras-chave e sinônimos em inglês relacionados aos principais conceitos do estudo. No entanto, verificou-se que o uso de uma string muito extensa resultava em limitações nas plataformas, como ausência de resultados relevantes ou falhas na execução da busca.
-
-Dessa forma, as strings foram adaptadas para cada base de dados, buscando equilibrar abrangência e precisão dos resultados.
-
-As strings completas são apresentadas a seguir para fins de reprodutibilidade do estudo.
+Devido a limitações técnicas das plataformas em processar comandos excessivamente extensos, as strings de busca foram adaptadas para cada base, equilibrando abrangência e precisão. As combinações de palavras-chave e operadores booleanos utilizados são apresentadas a seguir:
 
 \begin{tcolorbox}[title=String de busca — Google Acadêmico]
    ("vehicle telemetry" OR "vehicle monitoring" OR "vehicle tracking" OR
@@ -256,6 +255,8 @@ As strings completas são apresentadas a seguir para fins de reprodutibilidade d
    OR "hardware")
 \end{tcolorbox}
 
+\vspace{10pt}
+
 \begin{tcolorbox}[title=String de busca — IEEE Xplore]
    ("vehicle telemetry" OR "vehicle monitoring" OR "vehicle tracking" OR
    "fleet management systems")
@@ -266,17 +267,11 @@ As strings completas são apresentadas a seguir para fins de reprodutibilidade d
    AND ("security")
 \end{tcolorbox}
 
-Essa adaptação foi necessária para contornar limitações técnicas das plataformas e garantir a obtenção de resultados mais alinhados ao escopo da pesquisa.
+\subsection{Seleção e Avaliação dos Estudos}
 
-\subsection{Seleção dos Estudos}
+O processo de seleção ocorreu em duas etapas: uma triagem preliminar por títulos e resumos, seguida de uma análise detalhada dos critérios de inclusão e exclusão. O objetivo foi garantir que apenas trabalhos com descrição técnica mínima de hardware, geolocalização e transmissão de dados fossem considerados. Os critérios detalhados constam na Tabela \ref{tab:criterios_selecao}.
 
-O processo de seleção dos estudos foi realizado em duas etapas. Inicialmente, foi feita uma triagem preliminar dos trabalhos encontrados nas bases de dados, com base na leitura dos títulos e resumos, com o objetivo de identificar estudos potencialmente relevantes ao tema da pesquisa.
-
-Em seguida, os trabalhos pré-selecionados foram analisados de forma mais detalhada, sendo submetidos a critérios de inclusão e exclusão previamente definidos. Essa etapa teve como objetivo garantir que apenas estudos alinhados ao escopo da revisão, especialmente aqueles que envolvem o desenvolvimento de sistemas de telemetria com foco em hardware, comunicação de dados e segurança, fossem considerados na análise final.
-
-Os critérios utilizados estão apresentados na Tabela \ref{tab:criterios_selecao}.
-
-\begin{table}[h]
+\begin{table}[H]
    \centering
    \caption{Critérios de inclusão e exclusão dos estudos}
    \label{tab:criterios_selecao}
@@ -299,15 +294,11 @@ Os critérios utilizados estão apresentados na Tabela \ref{tab:criterios_seleca
    \end{tabular}
 \end{table}
 
-Ao final desse processo de seleção, foram incluídos 18 artigos, considerados aderentes ao escopo da pesquisa e, portanto, selecionados para a etapa de análise.
-
-\subsection{Avaliação dos Estudos}
+Após a seleção, os estudos foram submetidos a uma avaliação de qualidade (Tabela \ref{tab:criterios_qualidade}) que considerou o detalhamento da metodologia, a complexidade da infraestrutura e o rigor dos testes realizados. Ao final desse processo, 18 artigos foram selecionados para a análise final, apresentando um bom nível geral de qualidade, com notas variando entre 7 e 10.
 
 Após a seleção dos trabalhos, foi realizada a etapa de avaliação dos estudos, com o objetivo de analisar a qualidade e a profundidade técnica das propostas apresentadas. Para isso, foram definidos critérios de avaliação baseados em aspectos relevantes ao contexto de sistemas de telemetria veicular, especialmente no que diz respeito à implementação prática, comunicação de dados e interação com o veículo.
 
-Os critérios de qualidade adotados estão apresentados na Tabela \ref{tab:criterios_qualidade}.
-
-\begin{table}[h]
+\begin{table}[H]
    \centering
    \caption{Critérios de avaliação da qualidade dos estudos}
    \label{tab:criterios_qualidade}
@@ -352,14 +343,14 @@ Os resultados da revisão são apresentados a seguir, de forma geral, e organiza
 
 A análise dos estudos selecionados evidencia que a maioria das soluções de telemetria veicular de baixo custo é baseada em arquiteturas embarcadas utilizando microcontroladores de fácil acesso e ampla adoção no meio acadêmico e experimental. Entre os principais dispositivos identificados, destacam-se plataformas como ESP32, Arduino e Raspberry Pi, utilizadas de forma isolada ou combinada, dependendo da complexidade do sistema proposto.
 
-Observou-se que o uso de microcontroladores como o ESP32 é predominante em sistemas que exigem conectividade integrada, devido à presença nativa de Wi-Fi e Bluetooth, o que reduz a necessidade de módulos adicionais e contribui para a diminuição do custo e da complexidade do hardware. Já plataformas como Arduino são frequentemente utilizadas em conjunto com módulos externos, como GPS, GSM e sensores diversos, compondo arquiteturas modulares.
+Observou-se que o uso de microcontroladores como o ESP32 é predominante em sistemas que exigem conectividade integrada, devido à presença nativa de Wi-Fi e Bluetooth, o que reduz a necessidade de módulos adicionais e contribui para a diminuição do custo e da complexidade do hardware. Já plataformas como Arduino são frequentemente utilizadas em conjunto com módulos externos, como GPS (\textit{Global Positioning System} - Sistema de Posicionamento Global), GSM (\textit{Global System for Mobile Communications} - Sistema Global para Comunicações Móveis) e sensores diversos, compondo arquiteturas modulares.
 
 Além disso, alguns estudos adotam abordagens híbridas, combinando diferentes dispositivos para divisão de responsabilidades no sistema. Nesses casos, um microcontrolador pode ser responsável pela coleta de dados de sensores, enquanto outro dispositivo realiza o processamento ou a comunicação com servidores externos. Essa estratégia é especialmente utilizada quando há limitações de memória ou processamento em dispositivos individuais.
 
-A Figura \ref{fig:caretalk} ilustra uma das arquiteturas representativas identificadas nos estudos analisados, evidenciando a integração entre módulos embarcados, infraestrutura de comunicação e serviços em nuvem.
+A Figura \ref{fig:caretalk} ilustra uma das arquiteturas representativas identificadas nos estudos analisados, evidenciando a integração entre módulos embarcados.
 \begin{figure}[H]
    \centering
-   \includegraphics[width=0.8\linewidth]{images/figura_caretalk.jpg}
+   \includegraphics[width=0.9\linewidth]{images/figura_caretalk.jpg}
    \caption{Arquitetura do sistema Car e-Talk para manutenção inteligente de frotas. Fonte: Adaptado de \cite{hussain2021caretalk}.}
    \label{fig:caretalk}
 \end{figure}
@@ -375,8 +366,6 @@ Dessa forma, conclui-se que, embora exista uma convergência no uso de microcont
 A análise dos estudos selecionados demonstra que os sistemas de telemetria veicular baseados em IoT incorporam diferentes estratégias de atuação com o objetivo de promover segurança ativa, atuando diretamente no comportamento do veículo ou do motorista. Entre as abordagens mais recorrentes, destacam-se a geração de alertas automáticos e a implementação de mecanismos de controle remoto.
 
 Os alertas automáticos são amplamente utilizados como forma de intervenção indireta, sendo acionados a partir de condições específicas identificadas pelos sistemas, como excesso de velocidade, saída de áreas delimitadas (geocercas) ou detecção de eventos anômalos. Esses alertas podem ser enviados ao motorista, ao gestor da frota ou a sistemas externos, por meio de notificações em aplicações móveis, interfaces web ou mensagens via rede celular.
-
-Por outro lado, estratégias de atuação direta também são observadas, especialmente em sistemas que implementam controle remoto de ignição ou bloqueio do veículo. Nesses casos, o sistema é capaz de intervir ativamente no funcionamento do veículo, interrompendo seu uso em situações específicas, como roubo, uso não autorizado ou violação de limites operacionais previamente definidos.
 
 Por outro lado, estratégias de atuação direta também são observadas, especialmente em sistemas que implementam controle remoto de ignição ou bloqueio do veículo. Nesses casos, o sistema é capaz de intervir ativamente no funcionamento do veículo, interrompendo seu uso em situações específicas, como roubo, uso não autorizado ou violação de limites operacionais previamente definidos.
 
@@ -399,13 +388,13 @@ Dessa forma, conclui-se que, embora existam diversas estratégias de atuação v
 
 A análise dos estudos selecionados indica que a integração e o processamento dos dados de telemetria seguem, em sua maioria, uma arquitetura em camadas, composta por dispositivos embarcados, infraestrutura de comunicação e plataformas externas de armazenamento e visualização.
 
-Na camada de aquisição, os dados são coletados por sensores e módulos embarcados no veículo, sendo posteriormente transmitidos por meio de diferentes tecnologias de comunicação. Entre as abordagens mais comuns, destacam-se o uso de redes celulares (como GSM e 4G) e, em menor escala, tecnologias de baixo consumo e longo alcance, como LoRa. A escolha da tecnologia de comunicação está diretamente relacionada a fatores como custo, cobertura e necessidade de transmissão em tempo real.
+Na camada de aquisição, os dados são coletados por sensores e módulos embarcados no veículo, sendo posteriormente transmitidos por meio de diferentes tecnologias de comunicação. Entre as abordagens mais comuns, destacam-se o uso de redes celulares (como GSM e 4G) e, em menor escala, tecnologias de baixo consumo e longo alcance, como LoRa (\textit{Long Range} - Longo Alcance). A escolha da tecnologia de comunicação está diretamente relacionada a fatores como custo, cobertura e necessidade de transmissão em tempo real.
 
-Na camada de processamento e armazenamento, observa-se uma predominância do uso de servidores em nuvem ou plataformas remotas, responsáveis por receber, armazenar e organizar os dados enviados pelos dispositivos. Em alguns casos, são utilizados bancos de dados relacionais ou não relacionais, além de APIs para intermediar a comunicação entre os dispositivos e as aplicações finais. Essa estrutura permite maior escalabilidade e facilita a integração com diferentes interfaces de usuário.
+Na camada de processamento e armazenamento, observa-se uma predominância do uso de servidores em nuvem ou plataformas remotas, responsáveis por receber, armazenar e organizar os dados enviados pelos dispositivos. Em alguns casos, são utilizados bancos de dados relacionais ou não relacionais, além de APIs (\textit{Application Programming Interfaces} - Interfaces de Programação de Aplicações) para intermediar a comunicação entre os dispositivos e as aplicações finais. Essa estrutura permite maior escalabilidade e facilita a integração com diferentes interfaces de usuário.
 
 No que se refere à visualização, os dados são geralmente apresentados por meio de aplicações web ou móveis, que oferecem funcionalidades como monitoramento em tempo real, histórico de trajetos, geração de relatórios e visualização em mapas. Interfaces baseadas em dashboards são frequentemente utilizadas para consolidar as informações e permitir a análise por parte dos usuários.
 
-Como exemplo de interface e integração de dados em sistemas de telemetria, a Figura \ref{fig:smart_security} apresenta uma solução que combina rastreamento em tempo real com funcionalidades de segurança veicular baseadas em IoT.
+Como exemplo de interface e integração de dados em sistemas de telemetria, a Figura \ref{fig:smart_security} apresenta uma das arquiteturas propostas em um dos projetos.
 
 \begin{figure}[H]
    \centering
@@ -423,11 +412,11 @@ Dessa forma, conclui-se que, embora exista uma tendência clara na adoção de a
 
 A partir da análise dos estudos selecionados, alguns trabalhos se destacam pelo nível de complexidade, originalidade das soluções e impacto potencial no contexto da telemetria veicular baseada em IoT. Nesta subseção, são discutidos comparativamente os projetos mais relevantes, com foco em suas arquiteturas, estratégias de comunicação e mecanismos de segurança.
 
-O trabalho proposto por \cite{sridharan2025smart} destaca-se pela implementação de mecanismos de segurança ativa, permitindo a atuação direta sobre o veículo por meio do desligamento remoto da ignição em casos de uso não autorizado. O sistema utiliza uma abordagem híbrida de comunicação, combinando envio de dados via Wi-Fi para um banco de dados em nuvem (Firebase Realtime Database) e, como redundância, comunicação via SMS. Apesar das funcionalidades relevantes, observa-se uma limitação na infraestrutura de dados, que utiliza um banco baseado em JSON, menos robusto quando comparado a soluções relacionais. Além disso, a interface do sistema é restrita a uma aplicação móvel simples, o que pode impactar sua escalabilidade.
+O trabalho proposto por \cite{sridharan2025smart} destaca-se pela implementação de mecanismos de segurança ativa, permitindo a atuação direta sobre o veículo por meio do desligamento remoto da ignição em casos de uso não autorizado. O sistema utiliza uma abordagem híbrida de comunicação, combinando envio de dados via Wi-Fi para um banco de dados em nuvem (Firebase Realtime Database) e, como redundância, comunicação via SMS (\textit{Short Message Service} - Serviço de Mensagens Curtas). Apesar das funcionalidades relevantes, observa-se uma limitação na infraestrutura de dados, que utiliza um banco baseado em JSON (\textit{JavaScript Object Notation} - Notação de Objetos JavaScript), menos robusto quando comparado a soluções relacionais. Além disso, a interface do sistema é restrita a uma aplicação móvel simples, o que pode impactar sua escalabilidade.
 
-Por sua vez, o estudo apresentado por \cite{zahid2025advanced} adota uma abordagem voltada à eficiência operacional, com foco na redução do consumo de combustível e das emissões de gases. O sistema utiliza dados coletados diretamente da porta OBD2 e apresenta uma arquitetura de comunicação mais complexa, estruturada em múltiplas camadas e protocolos. Diferentemente de outros trabalhos, não há o desenvolvimento de um dispositivo próprio de telemetria, sendo utilizado um módulo comercial já equipado com GPS e conectividade 4G. Essa abordagem simplifica a implementação, mas reduz o controle sobre o hardware.
+Por sua vez, o estudo apresentado por \cite{zahid2025advanced} adota uma abordagem voltada à eficiência operacional, com foco na redução do consumo de combustível e das emissões de gases. O sistema utiliza dados coletados diretamente da porta OBD2 (\textit{On-Board Diagnostics II} – Diagnóstico a Bordo de Segunda Geração) e apresenta uma arquitetura de comunicação mais complexa, estruturada em múltiplas camadas e protocolos. Diferentemente de outros trabalhos, não há o desenvolvimento de um dispositivo próprio de telemetria, sendo utilizado um módulo comercial já equipado com GPS e conectividade 4G. Essa abordagem simplifica a implementação, mas reduz o controle sobre o hardware.
 
-Os trabalhos de \cite{rojas2020fleet} e \cite{bolanos2022fleet} apresentam soluções baseadas na tecnologia LoRa, com foco em sistemas de transporte inteligentes (ITS). Esses projetos se destacam pela padronização e pelo conjunto abrangente de funcionalidades, incluindo monitoramento contínuo, gestão de rotas e coleta de dados operacionais. No entanto, a utilização de LoRa impõe a necessidade de uma infraestrutura física dedicada, o que limita a escalabilidade geográfica do sistema e restringe sua aplicação a regiões específicas.
+Os trabalhos de \cite{rojas2020fleet} e \cite{bolanos2022fleet} apresentam soluções baseadas na tecnologia LoRa, com foco em sistemas de transporte inteligentes (ITS - \textit{Intelligent Transportation Systems}). Esses projetos se destacam pela padronização e pelo conjunto abrangente de funcionalidades, incluindo monitoramento contínuo, gestão de rotas e coleta de dados operacionais. No entanto, a utilização de LoRa impõe a necessidade de uma infraestrutura física dedicada, o que limita a escalabilidade geográfica do sistema e restringe sua aplicação a regiões específicas.
 
 Por fim, o trabalho de \cite{hussain2021caretalk} apresenta uma das abordagens mais completas em termos de monitoramento da saúde do veículo. O sistema combina dados provenientes da interface OBD2 com informações de sensores adicionais, como sensores de gases e de voltagem, permitindo uma análise mais detalhada das condições do veículo. Esses dados são processados por algoritmos de aprendizagem de máquina hospedados em uma infraestrutura em nuvem, proporcionando funcionalidades avançadas de diagnóstico e previsão de falhas. Essa integração entre coleta de dados e inteligência computacional representa um diferencial significativo em relação aos demais estudos.
 
@@ -478,7 +467,6 @@ Diante desse cenário, conclui-se que, embora haja avanços significativos no de
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
-\postextual
 
 % ---
 % Título e resumo em língua estrangeira
